@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcador de Baloncesto</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <!-- Sección de Configuración del Partido -->
+    <div id="setupSection">
+        <h1>Configuración del Partido</h1>
+        <label for="team1Name">Nombre del Equipo 1:</label>
+        <input type="text" id="team1Name" placeholder="Nombre del Equipo 1">
+        
+        <label for="team2Name">Nombre del Equipo 2:</label>
+        <input type="text" id="team2Name" placeholder="Nombre del Equipo 2">
+        
+        <label for="clockType">Tipo de Reloj:</label>
+        <select id="clockType">
+            <option value="timer">Temporizador</option>
+            <option value="clock">Cronómetro</option>
+        </select>
+        
+        <label for="matchType">Tipo de Partido:</label>
+        <select id="matchType">
+            <option value="regular">Juego Regular</option>
+            <option value="scrimmage">Cascarita</option>
+        </select>
+        
+        <label for="periods">Número de Períodos:</label>
+        <select id="periods">
+            <option value="2">2</option>
+            <option value="4">4</option>
+        </select>
+        
+        <button id="nextButton">Siguiente</button>
+    </div>
+
+    <!-- Sección para Agregar Jugadores -->
+    <div id="playersSection" style="display: none;">
+        <h1>Agregar Jugadores</h1>
+        <div id="team1Players">
+            <h2>Jugadores del Equipo 1</h2>
+            <button id="addPlayerTeam1">Agregar Jugador al Equipo 1</button>
+            <ul id="team1PlayerList"></ul>
+        </div>
+        <div id="team2Players">
+            <h2>Jugadores del Equipo 2</h2>
+            <button id="addPlayerTeam2">Agregar Jugador al Equipo 2</button>
+            <ul id="team2PlayerList"></ul>
+        </div>
+        <button id="startGameButton">Iniciar Partido</button>
+    </div>
+
+    <!-- Sección del Marcador (inicialmente oculta) -->
+    <div id="gameSection" style="display: none;">
+        <h1>Marcador de Baloncesto</h1>
+
+        <div id="scoreboard">
+            <div id="team1">
+                <h2 id="team1NameDisplay">Equipo 1</h2>
+                <p>Puntaje: <span id="scoreTeam1">0</span></p>
+                <button id="team1Add1">+1 Punto</button>
+                <button id="team1Add2">+2 Puntos</button>
+                <button id="team1Add3">+3 Puntos</button>
+            </div>
+            <div id="team2">
+                <h2 id="team2NameDisplay">Equipo 2</h2>
+                <p>Puntaje: <span id="scoreTeam2">0</span></p>
+                <button id="team2Add1">+1 Punto</button>
+                <button id="team2Add2">+2 Puntos</button>
+                <button id="team2Add3">+3 Puntos</button>
+            </div>
+        </div>
+
+        <button id="generateReportBtn">Generar Reporte</button>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
